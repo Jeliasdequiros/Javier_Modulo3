@@ -5,3 +5,45 @@
     line-height: 1;
 }
 
+body{
+    background-color: rgb(240, 240, 240);
+    height: 100vh;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns:repeat(7,auto);
+    grid-template-rows: 100px 1fr 100px;
+
+    & .header{
+        grid-column: 1/-1;
+        grid-row: 1/1;
+        }
+
+        & .menu{
+            display: flex;
+            justify-content: space-between;
+            & .menu__izq{
+                display: flex;
+                justify-content: space-around;
+            }
+            & .menu__der{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    & .main{
+        grid-column: 1/-1;
+        grid-row:2/2;
+    
+    & .footer{
+        grid-column: 1/-1;
+        grid-row: 3/3;
+    }
+    }
+
